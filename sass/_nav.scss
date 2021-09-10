@@ -1,0 +1,50 @@
+.nav-header{
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    height: 11rem;
+
+    &::after{
+        content: "";
+        position: absolute;
+        background: #1F2634;
+        height: 100%;
+        right: 0;
+        left: 63%;
+        transform: translateY(-100%);
+        border-radius: 0 0 0 1.5em;
+    }
+
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    & .nav-logo{
+
+    }
+
+    & .nav-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 30rem;
+        position: relative;
+        z-index: 2;
+
+        & li a{
+            display: inline-block;
+            font-size: 1.6rem;
+            color: $color-txt;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color .3s ease;
+
+            &.active{
+                color: $color-white;
+            }
+        }
+    }
+}

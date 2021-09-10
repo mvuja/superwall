@@ -1,0 +1,83 @@
+#hero{
+    position: relative;
+    height: 100vh;
+    min-height: 93rem;
+    max-height: 120rem;
+
+    & .hero-dots{
+        position: absolute;
+        left: 0;
+        top: 60%;
+    }
+
+    & .container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-top: 8rem;
+
+        @media only screen and (max-width: 1200px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        & .hero-content{
+            flex-basis: 50%;
+
+            @media only screen and (max-width: 1200px) {
+                flex-basis: auto;
+            }
+
+            @media only screen and (max-width: 900px) {
+                margin-top: 13rem;
+            }
+
+            & p{
+                margin: 4rem 0;
+                width: 76%;
+            }
+
+            & .hero-btn{
+                padding: 1.8rem 5.2rem;
+                font-size: 1.6rem;
+                color: $color-white;
+                background: linear-gradient(to left, $color-tertiary, $color-primary, $color-secondary,$color-tertiary, $color-secondary, $color-primary);
+                border-radius: .5rem;
+                background-size: 250% 100%;
+                transition: background .4s ease;
+
+                &:hover{
+                    background-position: 65% 0%;
+                }
+            }
+        }
+
+        & .hero-imgs{
+            flex-basis: 57%;
+
+            @media only screen and (max-width: 1200px) {
+                flex-basis: auto;
+            }
+
+            & .hero-img{
+                width: 130%;
+                transform: translateY(-3rem);
+
+                @media only screen and (max-width: 1690px) {
+                    width: 100%;
+                }
+
+                @media only screen and (max-width: 1200px) {
+                    max-width: 70rem;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                @media only screen and (max-width: 900px) {
+                    width: 80%;
+                    margin-top: 5rem;
+                }
+            }
+        }
+    }
+}
