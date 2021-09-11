@@ -1,0 +1,128 @@
+#platform{
+
+    & .container{
+        text-align: center;
+
+        & .section-txt{
+            margin: 4rem 0 7rem;
+        }
+
+        & .cards{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+            position: relative;
+
+            @media only screen and (max-width: 1200px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            & .line{
+                position: absolute;
+                height: 2px;
+                background: $color-primary;
+                bottom: -70px;
+                left: 15.2rem;
+                right: 50%;
+                transition: all .3s linear;
+
+                @media only screen and (max-width: 1200px) {
+                    display: none;
+                }
+            }
+
+            & .card{
+                background: #1F2634;
+                background: linear-gradient(to top, $color-primary, $color-secondary, $color-tertiary, #1F2634, #1F2634, #1F2634);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3.5rem 2rem;
+                border-radius: 1em;
+                cursor: pointer;
+                position: relative;
+                background-size: 100% 250%;
+                transition: background .5s ease;
+
+                &.active{
+                    background-position: 100% 100%;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 0;
+                    bottom: -70px;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-70px);
+                    background: $color-primary;
+                    transform-origin: top;
+
+                    @media only screen and (max-width: 1200px) {
+                        display: none;
+                    }
+                }
+                
+                &.active::after{
+                    height: 70px;
+                    transform: translateY(0px);
+                    transition: all .3s linear;
+                }
+
+                & .card-title{
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    color: $color-white;
+                    margin: 2rem 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+#platform-extend{
+    margin: 136px 0;
+
+    & .container{
+        display: flex;
+        align-items: center;
+
+        & .social-circle{
+            flex-basis: 50%;
+
+            & img{
+                width: 90%;
+            }
+        }
+
+        & .platform-right{
+            flex-basis: 50%;
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                height: 70px;
+                width: 2px;
+                background: $color-primary;
+                top: -70px;
+                left: 0;
+
+                @media only screen and (max-width: 1200px) {
+                    display: none;
+                }
+            }
+
+            &>div{
+                display: none;
+
+                &.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
