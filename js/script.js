@@ -1,4 +1,5 @@
 const line = $('.line')
+const line2 = $('.line2')
 
 const social = $('#social')
 const token = $('#token')
@@ -22,8 +23,24 @@ social.on('click', function(){
     crowdTxt.removeClass('active')
     goodsTxt.removeClass('active')
 
-    line.css('left', '15.2rem')
-    line.css('right', '50%')
+
+
+    line.css('left', '15.5rem')
+    line.css('right', 'calc(100% - 15.5rem)')
+    line.css('transition', 'none')
+
+    setTimeout(() => {
+        line.css('right', '50%')
+        line.css('transition', 'all .4s linear')
+    },200)
+
+    line2.css('height', 0)
+    line2.css('transition', 'none')
+    
+    setTimeout(() => {        
+        line2.css('height', 70)
+        line2.css('transition', 'all .2s linear')
+    }, 600)
 })
 token.on('click', function(){
     social.removeClass('active')
@@ -36,8 +53,27 @@ token.on('click', function(){
     crowdTxt.removeClass('active')
     goodsTxt.removeClass('active')
 
+    // line.css('left', '47.8rem')
+    // line.css('right', '50%')
+
+    // line2.css('height', 70)
+
     line.css('left', '47.8rem')
-    line.css('right', '50%')
+    line.css('right', 'calc(100% - 47.8rem)')
+    line.css('transition', 'none')
+
+    setTimeout(() => {
+        line.css('right', '50%')
+        line.css('transition', 'all .4s linear')
+    },200)
+
+    line2.css('height', 0)
+    line2.css('transition', 'none')
+    
+    setTimeout(() => {        
+        line2.css('height', 70)
+        line2.css('transition', 'all .2s linear')
+    }, 600)
 })
 crowd.on('click', function(){
     social.removeClass('active')
@@ -50,8 +86,27 @@ crowd.on('click', function(){
     crowdTxt.addClass('active')
     goodsTxt.removeClass('active')
 
-    line.css('left', '50%')
+    // line.css('left', '50%')
+    // line.css('right', '47.6rem')
+
+    // line2.css('height', 70)
+
+    line.css('left', 'calc(100% - 47.6rem)')
     line.css('right', '47.6rem')
+    line.css('transition', 'none')
+
+    setTimeout(() => {
+        line.css('left', '50%')
+        line.css('transition', 'all .4s linear')
+    },200)
+
+    line2.css('height', 0)
+    line2.css('transition', 'none')
+    
+    setTimeout(() => {        
+        line2.css('height', 70)
+        line2.css('transition', 'all .2s linear')
+    }, 600)
 })
 goods.on('click', function(){
     social.removeClass('active')
@@ -64,6 +119,25 @@ goods.on('click', function(){
     crowdTxt.removeClass('active')
     goodsTxt.addClass('active')
 
-    line.css('left', '50%')
+    // line.css('left', '50%')
+    // line.css('right', '15rem')
+
+    // line2.css('height', 70)
+
+    line.css('left', 'calc(100% - 15rem)')
     line.css('right', '15rem')
+    line.css('transition', 'none')
+
+    setTimeout(() => {
+        line.css('left', '50%')
+        line.css('transition', 'all .4s linear')
+    },200)
+
+    line2.css('height', 0)
+    line2.css('transition', 'none')
+    
+    setTimeout(() => {        
+        line2.css('height', 70)
+        line2.css('transition', 'all .2s linear')
+    }, 600)
 })

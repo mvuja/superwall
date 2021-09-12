@@ -1,0 +1,48 @@
+#grid{
+    padding: 10rem 0 0rem;
+
+    & .container{
+
+        & h2{
+            margin-bottom: 5rem;
+        }
+
+        & .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+
+            @media only screen and (max-width: 900px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 600px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            & .card{
+                padding: 3rem;
+                background: #1F2634;
+                border-radius: 1em;
+
+                & img{
+                    margin-bottom: 2rem;
+                }
+
+                & ul{
+                    list-style: inside;
+                    margin-top: 1.5rem;
+                    & li{
+                        color: $color-txt;
+                        font-size: 1.6rem;
+
+                        &:not(:last-child){
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

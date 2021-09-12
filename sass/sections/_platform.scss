@@ -22,7 +22,7 @@
                 height: 2px;
                 background: $color-primary;
                 bottom: -70px;
-                left: 15.2rem;
+                left: 15.5rem;
                 right: 50%;
                 transition: all .3s linear;
 
@@ -67,7 +67,7 @@
                 &.active::after{
                     height: 70px;
                     transform: translateY(0px);
-                    transition: all .3s linear;
+                    transition: all .2s linear;
                 }
 
                 & .card-title{
@@ -95,6 +95,17 @@
 
             & img{
                 width: 90%;
+                transform: rotate(0deg);
+                animation: img-rotate .8s ease-in-out infinite alternate;
+
+                @keyframes img-rotate {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(1.3deg);
+                    }
+                }
             }
         }
 
@@ -102,14 +113,18 @@
             flex-basis: 50%;
             position: relative;
 
-            &::before{
-                content: "";
+            & h2{
+                margin-bottom: 2rem;
+            }
+
+            & .line2{
                 position: absolute;
                 height: 70px;
                 width: 2px;
                 background: $color-primary;
-                top: -70px;
+                top: -68px;
                 left: 0;
+                transition: all .3s linear;
 
                 @media only screen and (max-width: 1200px) {
                     display: none;
