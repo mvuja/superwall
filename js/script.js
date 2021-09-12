@@ -141,3 +141,50 @@ goods.on('click', function(){
         line2.css('transition', 'all .2s linear')
     }, 600)
 })
+
+
+
+// TIMELINE
+console.clear();
+
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+// gsap.defaults({ease: "none"});
+
+
+
+// const pulses = gsap.timeline({
+//   defaults: {
+//     duration: 0.05, 
+//     autoAlpha: 1, 
+//     scale: 2, 
+//     transformOrigin: 'center', 
+//     ease: "elastic(2.5, 1)"
+//   }})
+
+const main = gsap.timeline({defaults: {duration: 1},
+  scrollTrigger: {
+    trigger: "#svg",
+    scrub: true,
+    start: "top center",
+    markers: true,
+    end: "60% center"
+  }})
+.from(".theLine", {drawSVG: 0}, 0)
+
+
+
+// AOS
+AOS.init();
+
+
+// SLIDER
+const swiper = new Swiper('.swiper', {
+    // loop: true,  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 5,
+    spaceBetween: 20
+  });

@@ -1,0 +1,54 @@
+#ambasadors{
+    margin-top: 20rem;
+    background: #0B0F17;
+    padding-bottom: 10rem;
+
+    & .container{
+        padding: 10rem 0;
+    }
+
+    & .slider-container{
+
+
+        & .swiper {
+            width: 85%;
+            margin-left: auto;
+            margin-right: 0;
+
+            & .slide-card{
+                background: #1F2634;
+                border-radius: 1rem;
+                padding: 3rem;
+                max-width: 35rem;
+
+                & p{
+                    color: $color-white;
+                }
+
+                & .name{
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+
+                & .slider-line{
+                    width: 90%;
+                    height: 2px;
+                    background: #0B0F17;
+                    border-radius: 100rem;
+                    margin: 2rem auto 2rem auto;
+                    display: block;
+                }
+
+                & .slider-img{
+                    margin-bottom: 3rem;
+                    
+                    & img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

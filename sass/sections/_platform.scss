@@ -42,7 +42,7 @@
                 cursor: pointer;
                 position: relative;
                 background-size: 100% 250%;
-                transition: background .5s ease;
+                // transition: background .5s ease;
 
                 &.active{
                     background-position: 100% 100%;
