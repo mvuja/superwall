@@ -146,13 +146,40 @@ goods.on('click', function(){
 
 
 
+// CARDS GO TO PLATFORM-EXTEND ON CLICK ON SMALLER DEVICES
+const x = window.matchMedia("(max-width: 1200px)")
+
+const cards = document.querySelectorAll('#platform .card')
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches      
+        cards.forEach(card => {
+            card.addEventListener('click', responsive)
+        })
+    } else {
+        cards.forEach(card => {
+            card.removeEventListener('click', responsive)
+        })
+    }
+  }
+
+  function responsive() {
+    location.href = '#platform-extend'
+  }
+  
+  myFunction(x) // Call listener function at run time
+  
+  x.addEventListener('change', myFunction)
+
+
+
+
+
 // TIMELINE
 console.clear();
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
 // gsap.defaults({ease: "none"});
-
-
 
 // const pulses = gsap.timeline({
 //   defaults: {
@@ -214,8 +241,7 @@ const swiper = new Swiper('.swiper', {
 
 
 
-//   TYPEIT
-
+// TYPEIT
 new TypeIt("#heading", {
     speed: 90,
     startDelay: 900,

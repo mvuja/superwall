@@ -14,8 +14,16 @@
         align-items: flex-end;
         justify-content: space-between;
 
+        @media only screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+
         & .brck-txt{
             flex-basis: 45%;
+
+            @media only screen and (max-width: 1024px) {
+                flex-basis: 100%;
+            }
 
             & .brck-line{
                 width: 10rem;
@@ -29,9 +37,26 @@
 
         & .brck-img{
             flex-basis: 50%;
+            
+            @media only screen and (max-width: 1024px) {
+                flex-basis: 100%;
+                width: 100%;
+                margin-top: 7rem;
+            }
 
             & img{
                 width: 100%;
+
+                @media only screen and (max-width: 1024px) {
+                    width: 70%;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                }
             }
         }
     }

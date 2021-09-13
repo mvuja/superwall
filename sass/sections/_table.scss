@@ -7,6 +7,11 @@
         padding: 5rem 7rem;
         border-radius: 5rem;
 
+        @media only screen and (max-width: 1440px) {
+            border-radius: 0;
+            padding: 4rem;
+        }
+
         .distribution-line{
             width: 10rem;
             height: 4px;

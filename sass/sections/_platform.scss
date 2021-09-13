@@ -1,5 +1,9 @@
 #platform{
 
+    @media only screen and (max-width: 1200px) {
+        margin-top: 10rem;
+    }
+
     & .container{
         text-align: center;
 
@@ -15,6 +19,10 @@
 
             @media only screen and (max-width: 1200px) {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 768px) {
+                grid-template-columns: repeat(1, 1fr);
             }
 
             & .line{
@@ -84,19 +92,38 @@
 
 
 #platform-extend{
-    margin: 136px 0;
+    margin: 13.6rem 0;
+
+    @media only screen and (max-width: 1024px) {
+        margin: 7rem 0;
+    }
 
     & .container{
         display: flex;
         align-items: center;
 
+        @media only screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+
         & .social-circle{
             flex-basis: 50%;
+
+            @media only screen and (max-width: 1024px) {
+                flex-basis: 100%;
+                order: 2;
+                margin-top: 5rem;
+            }
 
             & img{
                 width: 90%;
                 transform: rotate(0deg);
                 animation: img-rotate .8s ease-in-out infinite alternate;
+
+                @media only screen and (max-width: 1024px) {
+                    display: block;
+                    margin: 0 auto;
+                }
 
                 @keyframes img-rotate {
                     0%{

@@ -406,6 +406,12 @@ h3 {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  #platform {
+    margin-top: 10rem;
+  }
+}
+
 #platform .container {
   text-align: center;
 }
@@ -427,6 +433,13 @@ h3 {
   #platform .container .cards {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #platform .container .cards {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -508,7 +521,13 @@ h3 {
 }
 
 #platform-extend {
-  margin: 136px 0;
+  margin: 13.6rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  #platform-extend {
+    margin: 7rem 0;
+  }
 }
 
 #platform-extend .container {
@@ -520,9 +539,29 @@ h3 {
           align-items: center;
 }
 
+@media only screen and (max-width: 1024px) {
+  #platform-extend .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #platform-extend .container .social-circle {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+
+@media only screen and (max-width: 1024px) {
+  #platform-extend .container .social-circle {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 5rem;
+  }
 }
 
 #platform-extend .container .social-circle img {
@@ -531,6 +570,13 @@ h3 {
           transform: rotate(0deg);
   -webkit-animation: img-rotate .8s ease-in-out infinite alternate;
           animation: img-rotate .8s ease-in-out infinite alternate;
+}
+
+@media only screen and (max-width: 1024px) {
+  #platform-extend .container .social-circle img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @-webkit-keyframes img-rotate {
@@ -638,9 +684,25 @@ h3 {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 1024px) {
+  #brck .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #brck .container .brck-txt {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
+}
+
+@media only screen and (max-width: 1024px) {
+  #brck .container .brck-txt {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 #brck .container .brck-txt .brck-line {
@@ -658,8 +720,31 @@ h3 {
       flex-basis: 50%;
 }
 
+@media only screen and (max-width: 1024px) {
+  #brck .container .brck-img {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
+    margin-top: 7rem;
+  }
+}
+
 #brck .container .brck-img img {
   width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  #brck .container .brck-img img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #brck .container .brck-img img {
+    width: 100%;
+  }
 }
 
 #grid {
@@ -733,9 +818,29 @@ h3 {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 1024px) {
+  #tokenomics .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 7rem;
+  }
+}
+
 #tokenomics .container .tokenomics-img {
   -ms-flex-preferred-size: 58%;
       flex-basis: 58%;
+}
+
+@media only screen and (max-width: 1024px) {
+  #tokenomics .container .tokenomics-img {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 #tokenomics .container .tokenomics-img img {
@@ -766,6 +871,13 @@ h3 {
   max-width: 150rem;
   padding: 5rem 7rem;
   border-radius: 5rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  #table .container {
+    border-radius: 0;
+    padding: 4rem;
+  }
 }
 
 #table .container .distribution-line {
