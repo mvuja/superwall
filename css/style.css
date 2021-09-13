@@ -249,7 +249,7 @@ h3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 8rem 30rem 0;
+    padding: 8rem 4rem 0;
   }
 }
 
@@ -308,8 +308,20 @@ h3 {
           justify-content: center;
 }
 
+#hero .container .hero-imgs-desktop .hero-img-s {
+  margin-top: 7rem;
+}
+
 #hero .container .hero-imgs-desktop .hero-img-s img {
   width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  #hero .container .hero-imgs-desktop .hero-img-s img {
+    width: 70%;
+  }
 }
 
 #hero .container .hero-imgs-desktop .hero-cloud-top {
@@ -320,12 +332,44 @@ h3 {
           animation: cloud 5s ease-in-out infinite;
 }
 
+@media only screen and (max-width: 1500px) {
+  #hero .container .hero-imgs-desktop .hero-cloud-top {
+    width: 30rem;
+    top: 40px;
+    right: -50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #hero .container .hero-imgs-desktop .hero-cloud-top {
+    width: 30rem;
+    top: 0px;
+    right: 0px;
+  }
+}
+
 #hero .container .hero-imgs-desktop .hero-cloud-bottom {
   position: absolute;
   bottom: 0;
   left: -50px;
   -webkit-animation: cloud 9s ease-in-out infinite;
           animation: cloud 9s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 1500px) {
+  #hero .container .hero-imgs-desktop .hero-cloud-bottom {
+    width: 30rem;
+    bottom: 40px;
+    left: -50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #hero .container .hero-imgs-desktop .hero-cloud-bottom {
+    width: 30rem;
+    bottom: 0px;
+    left: 0px;
+  }
 }
 
 @-webkit-keyframes cloud {
@@ -933,11 +977,11 @@ h3 {
 }
 
 #ambasadors .container {
-  padding: 10rem 0;
+  padding: 10rem 0 5rem;
 }
 
 #ambasadors .slider-container .swiper {
-  width: 85%;
+  width: 86%;
   margin-left: auto;
   margin-right: 0;
 }

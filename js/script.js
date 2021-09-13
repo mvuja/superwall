@@ -1,3 +1,5 @@
+// CARDS
+
 const line = $('.line')
 const line2 = $('.line2')
 
@@ -185,6 +187,27 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 5,
-    spaceBetween: 20
-  });
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+        800: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1440: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        }
+      }
+  })
