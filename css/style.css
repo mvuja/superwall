@@ -129,6 +129,10 @@ h1 {
   line-height: 1.2;
 }
 
+h1 .ti-cursor {
+  font-weight: 300 !important;
+}
+
 h2 {
   font-size: 4.6rem;
   font-weight: 700;

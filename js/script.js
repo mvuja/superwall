@@ -211,3 +211,28 @@ const swiper = new Swiper('.swiper', {
         }
       }
   })
+
+
+
+//   TYPEIT
+
+new TypeIt("#heading", {
+    speed: 90,
+    startDelay: 900,
+    waitUntilVisible: true,
+    deleteSpeed: 200,
+  }).type("Welcme", { delay: 300 })
+  .move(-1)
+  .move(-1)
+  .type("o")
+  .move(null, { to: "END" })
+  .type(" to")
+  .pause(300)
+  .break({ delay: 500 })
+  .type("SupeeWa", { delay: 200 })
+  .move(-2)
+  .delete(1)
+  .type("r")
+  .move(null, { to: "END" })
+  .type("ll Platform")
+  .go()

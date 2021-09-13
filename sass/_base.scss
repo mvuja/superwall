@@ -122,6 +122,10 @@ h1{
     color: $color-white;
     font-weight: 600;
     line-height: 1.2;
+
+    & .ti-cursor{
+        font-weight: 300!important;
+    }
 }
 
 h2{
