@@ -145,6 +145,16 @@ h3 {
   color: #fff;
 }
 
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#AD00FF), color-stop(#FF2156), to(#FFBB6E));
+  background: linear-gradient(to right, #AD00FF, #FF2156, #FFBB6E);
+  z-index: 1000;
+}
+
 .container {
   padding: 0 4rem;
   max-width: 136rem;
@@ -639,9 +649,20 @@ h3 {
 #coming-soon {
   background: url("../../images/coming-soon-bg.svg");
   padding: 9rem 0;
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 1920px) {
+  #coming-soon {
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #coming-soon {
+    padding: 5rem 0;
+  }
 }
 
 #coming-soon .container {
@@ -658,6 +679,12 @@ h3 {
   font-size: 7rem;
   letter-spacing: 10px;
   line-height: 1.2;
+}
+
+@media only screen and (max-width: 500px) {
+  #coming-soon .container p {
+    font-size: 5rem;
+  }
 }
 
 #brck {
