@@ -52,6 +52,7 @@ footer, header, hgroup, menu, nav, section {
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     font-family: sans-serif;
 
     @include respond(tab-land){
@@ -70,6 +71,7 @@ html{
 body{
     box-sizing: border-box;
     overflow-x: hidden;
+    width: 100%;
     background: #131925;
     font-family: 'Poppins', sans-serif;
 }

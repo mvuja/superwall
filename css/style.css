@@ -53,6 +53,7 @@ footer, header, hgroup, menu, nav, section {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   font-family: sans-serif;
 }
 
@@ -78,6 +79,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
+  width: 100%;
   background: #131925;
   font-family: 'Poppins', sans-serif;
 }
@@ -1123,10 +1125,60 @@ h3 {
   padding: 10rem 0 5rem;
 }
 
+#ambasadors .slider-container {
+  position: relative;
+}
+
+#ambasadors .slider-container::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 38rem;
+  background: -webkit-gradient(linear, left top, right top, from(#0b0f1700), color-stop(90%, #0B0F17));
+  background: linear-gradient(to right, #0b0f1700, #0B0F17 90%);
+}
+
+#ambasadors .slider-container .swiper-button-next {
+  top: -7rem;
+  left: auto;
+  right: 35rem;
+}
+
+#ambasadors .slider-container .swiper-button-next::after {
+  position: absolute;
+  content: "";
+  background: url(../../images/arrow-right.svg);
+  background-size: contain;
+  width: 85px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+#ambasadors .slider-container .swiper-button-prev {
+  bottom: auto;
+  top: -7rem;
+  left: auto;
+  right: 45rem;
+}
+
+#ambasadors .slider-container .swiper-button-prev::after {
+  position: absolute;
+  content: "";
+  background: url(../../images/arrow-left.svg);
+  background-size: contain;
+  width: 85px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
 #ambasadors .slider-container .swiper {
   width: 86%;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
 }
 
 #ambasadors .slider-container .swiper .slide-card {

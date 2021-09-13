@@ -8,12 +8,59 @@
     }
 
     & .slider-container{
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 38rem;
+            background: linear-gradient(to right, #0b0f1700, #0B0F17 90%);
+        }
+
+        & .swiper-button-next{
+            // bottom: auto;
+            top: -7rem;
+            left: auto;
+            right: 35rem;
+
+            &::after{
+                position: absolute;
+                content: "";
+                background: url(../../images/arrow-right.svg);
+                background-size: contain;
+                width: 85px;
+                height: 20px;
+                background-repeat: no-repeat;
+            }
+        }
+
+        & .swiper-button-prev{
+            bottom: auto;
+            top: -7rem;
+            left: auto;
+            right: 45rem;
+
+            &::after{
+                position: absolute;
+                content: "";
+                background: url(../../images/arrow-left.svg);
+                background-size: contain;
+                width: 85px;
+                height: 20px;
+                background-repeat: no-repeat;
+            }
+        }
 
 
         & .swiper {
             width: 86%;
             margin-left: auto;
             margin-right: 0;
+            position: relative;
 
             & .slide-card{
                 background: #1F2634;
