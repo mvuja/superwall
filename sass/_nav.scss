@@ -17,6 +17,12 @@
         left: 63%;
         transform: translateY(-100%);
         border-radius: 0 0 0 1.5em;
+        transition: width .3s ease, height 2s .5s ease;
+
+        @media only screen and (max-width: 768px){
+            left: auto;
+            width: 147px;
+        }
     }
 
     & .container{
@@ -27,7 +33,62 @@
     }
 
     & .nav-logo{
+        
+        @media only screen and (max-width: 768px) {
 
+            & img{
+                width: 55%;
+                margin-top: -10px;
+            }
+            
+        }
+    }
+
+    & .hamburger{
+        position: relative;
+        z-index: 3;
+
+        @media only screen and (min-width:769px) {
+            display: none;
+        }
+
+        & .ham{
+            cursor: pointer;
+            transition: transform .4s;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .line {
+            fill:none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: $color-white;
+            stroke-width:5.5;
+            stroke-linecap:round;
+          }
+
+        .ham3 .top {
+            stroke-dasharray: 40 130;
+          }
+          .ham3 .middle {
+            stroke-dasharray: 40 140;
+          }
+          .ham3 .bottom {
+            stroke-dasharray: 40 205;
+          }
+          .ham3.active .top {
+            stroke-dasharray: 75 130;
+            stroke-dashoffset: -63px;
+          }
+          .ham3.active .middle {
+            stroke-dashoffset: -102px;
+          }
+          .ham3.active .bottom {
+            stroke-dasharray: 110 205;
+            stroke-dashoffset: -86px;
+          }
     }
 
     & .nav-links{
@@ -48,6 +109,32 @@
 
             &.active{
                 color: $color-white;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            right: -100%;
+            background: rgba(0, 0, 0, 0.671);
+            transition: right .4s ease;
+
+            & li a{
+                font-size: 3rem;
+                color: $color-txt;
+                font-weight: 400;
+    
+                &.active{
+                    color: $color-white;
+                }
+            }
+            
+            &.active{
+                right: 0;
             }
         }
     }

@@ -10,6 +10,25 @@ window.addEventListener('scroll', () => {
 
 
 
+// HAMBURGER
+
+$('.hamburger').on('click', function(){
+  $('.hamburger .ham').toggleClass('active')
+  $('.nav-links').toggleClass('active')
+
+$('.nav-header').toggleClass('active')
+})
+
+
+$('.nav-links').on('click', function(){
+  $('.hamburger .ham').toggleClass('active')
+  $('.nav-links').toggleClass('active')
+})
+
+
+
+
+
 // CARDS
 
 const line = $('.line')
