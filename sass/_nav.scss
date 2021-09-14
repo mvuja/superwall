@@ -107,8 +107,28 @@
             letter-spacing: 1px;
             transition: color .3s ease;
 
+            &:hover{
+                color: $color-white;
+            }
+
             &.active{
                 color: $color-white;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    background: linear-gradient(to right, $color-primary, $color-secondary, $color-tertiary);
+                    border-radius: 100px;
+                    bottom: -4.13rem;
+                    left: -15px;
+                    right: -15px;
+                    height: 5px;
+
+                    @media only screen and (max-width:768px) {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -116,12 +136,16 @@
             position: fixed;
             flex-direction: column;
             justify-content: center;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            right: -100%;
-            background: rgba(0, 0, 0, 0.671);
-            transition: right .4s ease;
+            top: -100%;
+            height: 100%;
+            right: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            transition: top .4s ease;
+
+            & li:not(:last-child){
+                margin-bottom: 4rem;
+            }
 
             & li a{
                 font-size: 3rem;
@@ -134,7 +158,7 @@
             }
             
             &.active{
-                right: 0;
+                top: 0;
             }
         }
     }

@@ -15,8 +15,8 @@ window.addEventListener('scroll', () => {
 $('.hamburger').on('click', function(){
   $('.hamburger .ham').toggleClass('active')
   $('.nav-links').toggleClass('active')
-
-$('.nav-header').toggleClass('active')
+  
+  $('.nav-header').toggleClass('active')
 })
 
 
