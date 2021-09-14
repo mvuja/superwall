@@ -159,7 +159,7 @@ goods.on('click', function(){
 
 
 // CARDS GO TO PLATFORM-EXTEND ON CLICK ON SMALLER DEVICES
-const x = window.matchMedia("(max-width: 1200px)")
+const x = window.matchMedia("(max-width: 1370px)")
 
 const cards = document.querySelectorAll('#platform .card')
 
@@ -207,10 +207,51 @@ const main = gsap.timeline({defaults: {duration: 1},
     trigger: "#svg",
     scrub: true,
     start: "top center",
-    markers: true,
+    // markers: true,
     end: "60% center"
   }})
 .from(".theLine", {drawSVG: 0}, 0)
+
+
+const main2 = gsap.timeline({defaults: {duration: 1},
+  scrollTrigger: {
+    trigger: "#svgMD",
+    scrub: true,
+    start: "top center",
+    // markers: true,
+    end: "60% center"
+  }})
+.from(".theLineMD", {drawSVG: 0}, 0)
+
+const main3 = gsap.timeline({defaults: {duration: 1},
+  scrollTrigger: {
+    trigger: "#svgTBL",
+    scrub: true,
+    start: "top center",
+    // markers: true,
+    end: "60% center"
+  }})
+.from(".theLineTBL", {drawSVG: 0}, 0)
+
+const main4 = gsap.timeline({defaults: {duration: 1},
+  scrollTrigger: {
+    trigger: "#svgSM",
+    scrub: true,
+    start: "top center",
+    // markers: true,
+    end: "60% center"
+  }})
+.from(".theLineSM", {drawSVG: 0}, 0)
+
+const main5 = gsap.timeline({defaults: {duration: 1},
+  scrollTrigger: {
+    trigger: "#svgXSM",
+    scrub: true,
+    start: "top center",
+    // markers: true,
+    end: "60% center"
+  }})
+.from(".theLineXSM", {drawSVG: 0}, 0)
 
 
 

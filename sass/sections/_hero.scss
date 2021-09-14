@@ -8,6 +8,10 @@
         position: absolute;
         left: 0;
         top: 60%;
+
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
     }
 
     & .container{
@@ -21,6 +25,10 @@
             flex-direction: column;
             justify-content: center;
             padding: 8rem 4rem 0;
+        }
+
+        @media only screen and (max-width: 900px) {
+            padding: 0rem 4rem 0;
         }
 
         & .hero-content{
@@ -101,6 +109,10 @@
                     @media only screen and (max-width: 1200px) {
                         width: 70%;
                     }
+
+                    @media only screen and (max-width: 500px) {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -120,6 +132,16 @@
                     top: 0px;
                     right: 0px;
                 }
+                @media only screen and (max-width: 500px) {
+                    width: 25rem;
+                    top: 20px;
+                    right: 0px;
+                }
+                @media only screen and (max-width: 425px) {
+                    width: 20rem;
+                    top: 30px;
+                    right: 0px;
+                }
             }
 
             & .hero-cloud-bottom{
@@ -136,6 +158,16 @@
                 @media only screen and (max-width: 1200px) {
                     width: 30rem;
                     bottom: 0px;
+                    left: 0px;
+                }
+                @media only screen and (max-width: 500px) {
+                    width: 25rem;
+                    bottom: 0px;
+                    left: 0px;
+                }
+                @media only screen and (max-width: 425px) {
+                    width: 20rem;
+                    bottom: 10px;
                     left: 0px;
                 }
             }
