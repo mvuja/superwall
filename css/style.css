@@ -445,6 +445,8 @@ h3 {
 @media only screen and (max-width: 500px) {
   #hero .container .hero-content {
     margin-top: 8rem;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -483,6 +485,12 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #hero .container .hero-imgs-desktop {
+    margin-top: -9rem;
+  }
 }
 
 #hero .container .hero-imgs-desktop .hero-img-s {

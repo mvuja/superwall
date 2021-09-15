@@ -44,6 +44,8 @@
 
             @media only screen and (max-width: 500px) {
                 margin-top: 8rem;
+                position: relative;
+                z-index: 2;
             }
 
             & p{
@@ -101,6 +103,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media only screen and (max-width: 500px) {
+                margin-top: -9rem;
+            }
 
             & .hero-img-s{
                 margin-top: 7rem;

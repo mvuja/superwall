@@ -45,6 +45,8 @@ const crowdTxt = $('.crowd-txt')
 const goodsTxt = $('.goods-txt')
 
 
+let timeOut
+
 social.on('click', function(){
     social.addClass('active')
     token.removeClass('active')
@@ -69,12 +71,15 @@ social.on('click', function(){
 
     line2.css('height', 0)
     line2.css('transition', 'none')
-    
-    setTimeout(() => {        
+
+
+    clearTimeout(timeOut)
+    timeOut = setTimeout(() => {        
         line2.css('height', 70)
         line2.css('transition', 'all .2s linear')
     }, 600)
 })
+
 token.on('click', function(){
     social.removeClass('active')
     token.addClass('active')
@@ -102,12 +107,17 @@ token.on('click', function(){
 
     line2.css('height', 0)
     line2.css('transition', 'none')
-    
-    setTimeout(() => {        
+
+
+    clearTimeout(timeOut)
+    timeOut = setTimeout(() => {        
         line2.css('height', 70)
         line2.css('transition', 'all .2s linear')
     }, 600)
 })
+
+
+
 crowd.on('click', function(){
     social.removeClass('active')
     token.removeClass('active')
@@ -135,12 +145,16 @@ crowd.on('click', function(){
 
     line2.css('height', 0)
     line2.css('transition', 'none')
+
     
-    setTimeout(() => {        
+    clearTimeout(timeOut)
+    timeOut = setTimeout(() => {        
         line2.css('height', 70)
         line2.css('transition', 'all .2s linear')
     }, 600)
 })
+
+
 goods.on('click', function(){
     social.removeClass('active')
     token.removeClass('active')
@@ -168,8 +182,10 @@ goods.on('click', function(){
 
     line2.css('height', 0)
     line2.css('transition', 'none')
+
     
-    setTimeout(() => {        
+    clearTimeout(timeOut)
+    timeOut = setTimeout(() => {        
         line2.css('height', 70)
         line2.css('transition', 'all .2s linear')
     }, 600)
@@ -275,7 +291,9 @@ const main5 = gsap.timeline({defaults: {duration: 1},
 
 
 // AOS
-AOS.init();
+AOS.init({
+  once: true
+});
 
 
 // SLIDER
