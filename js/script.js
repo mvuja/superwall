@@ -300,34 +300,34 @@ AOS.init({
 const swiper = new Swiper('.swiper', {
     // loop: true,  
     // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 20
-          },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-        800: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        },
-        1200: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        1440: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-        }
-      }
-  })
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+    600: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1200: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+    },
+    1440: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+    }
+  }
+})
 
 
 
