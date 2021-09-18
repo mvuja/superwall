@@ -58,8 +58,24 @@
                 background-size: 100% 250%;
                 // transition: background .5s ease;
 
+                & img.active{
+                    display: none;
+                }
+
+                & img.non-active{
+                    display: block;
+                }
+
                 &.active{
                     background-position: 100% 100%;
+
+                    & img.active{
+                        display: block;
+                    }
+
+                    & img.non-active{
+                        display: none;
+                    }
                 }
 
                 &::after{

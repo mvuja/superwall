@@ -711,8 +711,24 @@ h3 {
   background-size: 100% 250%;
 }
 
+#platform .container .cards .card img.active {
+  display: none;
+}
+
+#platform .container .cards .card img.non-active {
+  display: block;
+}
+
 #platform .container .cards .card.active {
   background-position: 100% 100%;
+}
+
+#platform .container .cards .card.active img.active {
+  display: block;
+}
+
+#platform .container .cards .card.active img.non-active {
+  display: none;
 }
 
 #platform .container .cards .card::after {
