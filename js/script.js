@@ -244,7 +244,7 @@ const main = gsap.timeline({defaults: {duration: 1},
     trigger: "#svg",
     scrub: true,
     start: "top 65%",
-    markers: true,
+    // markers: true,
     end: "60% center"
   }})
 .from(".theLine", {drawSVG: 0}, 0)
