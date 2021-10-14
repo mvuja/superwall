@@ -1,3 +1,5 @@
+// SCROLL LINE TOP
+
 const scrollProgress = document.getElementById('scroll-progress');
 const height =
   document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -241,8 +243,8 @@ const main = gsap.timeline({defaults: {duration: 1},
   scrollTrigger: {
     trigger: "#svg",
     scrub: true,
-    start: "top center",
-    // markers: true,
+    start: "top 65%",
+    markers: true,
     end: "60% center"
   }})
 .from(".theLine", {drawSVG: 0}, 0)
