@@ -14,9 +14,14 @@ window.addEventListener('scroll', () => {
 
 // HAMBURGER
 
+// const html = document.documentElement
+// const body = document.body
+
 $('.hamburger').on('click', function(){
   $('.hamburger .ham').toggleClass('active')
   $('.nav-links').toggleClass('active')
+  // html.classList.toggle('no-scroll')
+  // body.classList.toggle('no-scroll')
   
   $('.nav-header').toggleClass('active')
 })
@@ -225,9 +230,9 @@ function myFunction(x) {
 
 
 // TIMELINE
-console.clear();
+console.clear()
 
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin)
 // gsap.defaults({ease: "none"});
 
 // const pulses = gsap.timeline({
@@ -354,3 +359,20 @@ new TypeIt("#heading", {
   .move(null, { to: "END" })
   .type("ll Platform")
   .go()
+
+
+
+// SMOOTH SCROLL
+
+const lenis = new Lenis()
+
+// lenis.on('scroll', (e) => {
+//   console.log(e)
+// })
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

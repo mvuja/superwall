@@ -49,9 +49,29 @@ footer, header, hgroup, menu, nav, section {
     background: $color-secondary;
 }
 
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
 html{
     font-size: 62.5%;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
     overflow-x: hidden;
     font-family: sans-serif;
 
@@ -68,12 +88,20 @@ html{
     }
 }
 
+html.no-scroll{
+    overflow: hidden;
+}
+
 body{
     box-sizing: border-box;
     overflow-x: hidden;
     width: 100%;
     background: #131925;
     font-family: 'Poppins', sans-serif;
+}
+
+body.no-scroll{
+    overflow: hidden;
 }
 
 img {
